@@ -25,11 +25,11 @@ const AnimatedBackground = () => {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 2 + 0.5;
-        this.speedX = Math.random() * 0.3 - 0.15;
-        this.speedY = Math.random() * 0.3 - 0.15;
-        this.opacity = Math.random() * 0.3 + 0.1;
-        this.pulseSpeed = Math.random() * 0.015 + 0.005;
+        this.size = Math.random() * 1.5 + 0.3;
+        this.speedX = Math.random() * 0.2 - 0.1;
+        this.speedY = Math.random() * 0.2 - 0.1;
+        this.opacity = Math.random() * 0.2 + 0.05;
+        this.pulseSpeed = Math.random() * 0.01 + 0.003;
         this.pulsePhase = Math.random() * Math.PI * 2;
       }
 
@@ -49,7 +49,7 @@ const AnimatedBackground = () => {
       }
 
       draw() {
-        ctx.fillStyle = `rgba(107, 70, 193, ${this.opacity})`;
+        ctx.fillStyle = `rgba(59, 130, 246, ${this.opacity * 0.4})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.currentSize, 0, Math.PI * 2);
         ctx.fill();
@@ -59,8 +59,8 @@ const AnimatedBackground = () => {
           this.x, this.y, 0,
           this.x, this.y, this.currentSize * 2
         );
-        gradient.addColorStop(0, `rgba(139, 92, 246, ${this.opacity * 0.2})`);
-        gradient.addColorStop(1, 'rgba(107, 70, 193, 0)');
+        gradient.addColorStop(0, `rgba(96, 165, 250, ${this.opacity * 0.1})`);
+        gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
         
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -72,7 +72,7 @@ const AnimatedBackground = () => {
     // Initialize particles - reduced quantity
     const initParticles = () => {
       particles = [];
-      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 4000);
+      const numberOfParticles = Math.floor((canvas.width * canvas.height) / 8000);
       for (let i = 0; i < numberOfParticles; i++) {
         particles.push(new Particle());
       }
@@ -96,8 +96,8 @@ const AnimatedBackground = () => {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < 120) {
-            ctx.strokeStyle = `rgba(107, 70, 193, ${0.08 * (1 - distance / 120)})`;
-            ctx.lineWidth = 0.3;
+            ctx.strokeStyle = `rgba(59, 130, 246, ${0.05 * (1 - distance / 120)})`;
+            ctx.lineWidth = 0.2;
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(particles[j].x, particles[j].y);

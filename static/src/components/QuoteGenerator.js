@@ -90,10 +90,10 @@ const QuoteGenerator = () => {
       {/* Hero Section - Center */}
       <div className="flex-shrink-0 text-center px-4 md:px-8 pb-4 md:pb-8 pt-2">
         <div className="flex flex-col items-center space-y-1 md:space-y-3">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal text-white tracking-tight" style={{ fontFamily: "'Courier New', 'Courier', monospace", fontWeight: 400 }}>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tight" style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif", fontWeight: 600 }}>
             Swan
           </h1>
-          <p className="text-white/60 text-sm md:text-base lg:text-lg max-w-xl font-light tracking-wide px-4" style={{ fontFamily: "'Courier New', 'Courier', monospace" }}>
+          <p className="text-slate-300 text-sm md:text-base lg:text-lg max-w-xl font-normal tracking-normal px-4" style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
             Because sometimes, the right words can light the stars inside you
           </p>
         </div>
@@ -104,13 +104,13 @@ const QuoteGenerator = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 h-full">
           {/* Quote Display - More compact on mobile */}
           <div className="flex items-center justify-center order-2 lg:order-1">
-            <div className="w-full max-w-2xl border border-purple-primary/20 rounded-xl md:rounded-2xl p-4 md:p-8 lg:p-12 min-h-[180px] md:min-h-[280px] flex items-center justify-center bg-gradient-to-br from-purple-primary/20 via-purple-accent/10 to-transparent backdrop-blur-sm">
+            <div className="w-full max-w-2xl border border-blue-800/30 rounded-lg md:rounded-xl p-4 md:p-8 lg:p-12 min-h-[180px] md:min-h-[280px] flex items-center justify-center bg-slate-800/40 backdrop-blur-sm shadow-lg">
               {quote ? (
                 <div className="space-y-3 md:space-y-6 w-full" dir={language === 'ar' ? 'rtl' : 'ltr'}>
                   <div
-                    className="text-lg md:text-2xl lg:text-3xl font-serif text-white/90 leading-relaxed"
+                    className="text-lg md:text-2xl lg:text-3xl font-serif text-white leading-relaxed"
                     style={{
-                      fontFamily: language === 'ar' ? "'Amiri', 'Georgia', serif" : "'Crimson Text', 'Georgia', serif",
+                      fontFamily: language === 'ar' ? "'Amiri', 'Georgia', serif" : "'Georgia', serif",
                       fontStyle: language === 'ar' ? 'normal' : 'italic',
                       lineHeight: language === 'ar' ? '2' : '1.6'
                     }}
@@ -119,10 +119,10 @@ const QuoteGenerator = () => {
                   </div>
                   {author && (
                     <div
-                      className="text-sm md:text-base text-purple-light/80 font-light"
+                      className="text-sm md:text-base text-blue-300/80 font-normal"
                       style={{
                         textAlign: language === 'ar' ? 'left' : 'right',
-                        fontFamily: language === 'ar' ? "'Cairo', sans-serif" : "'Poppins', 'Inter', sans-serif"
+                        fontFamily: language === 'ar' ? "'Cairo', sans-serif" : "'Inter', 'Segoe UI', sans-serif"
                       }}
                     >
                       — {author}
@@ -130,8 +130,8 @@ const QuoteGenerator = () => {
                   )}
                   <button
                     onClick={handleCopyQuote}
-                    className="mt-3 md:mt-6 px-4 md:px-5 py-2 bg-purple-primary/20 hover:bg-purple-primary/30 border border-purple-primary/40 rounded-lg text-white text-xs md:text-sm font-light transition-all w-full md:w-auto"
-                    style={{ fontFamily: language === 'ar' ? "'Cairo', sans-serif" : "'Poppins', 'Inter', sans-serif" }}
+                    className="mt-3 md:mt-6 px-4 md:px-5 py-2 bg-blue-700/30 hover:bg-blue-700/50 border border-blue-600/40 rounded-md text-white text-xs md:text-sm font-normal transition-all w-full md:w-auto"
+                    style={{ fontFamily: language === 'ar' ? "'Cairo', sans-serif" : "'Inter', 'Segoe UI', sans-serif" }}
                   >
                     {language === 'ar' ? 'نسخ الاقتباس' : 'Copy Quote'}
                   </button>
@@ -139,9 +139,9 @@ const QuoteGenerator = () => {
               ) : (
                 <div className="text-center" dir={language === 'ar' ? 'rtl' : 'ltr'}>
                   <p
-                    className="text-base md:text-xl text-white/30 font-light"
+                    className="text-base md:text-xl text-slate-400 font-normal"
                     style={{
-                      fontFamily: language === 'ar' ? "'Amiri', 'Georgia', serif" : "'Crimson Text', 'Georgia', serif",
+                      fontFamily: language === 'ar' ? "'Amiri', 'Georgia', serif" : "'Georgia', serif",
                       fontStyle: language === 'ar' ? 'normal' : 'italic'
                     }}
                   >
@@ -154,25 +154,25 @@ const QuoteGenerator = () => {
 
           {/* Controls - Show first on mobile for better UX */}
           <div className="flex items-start md:items-center justify-center order-1 lg:order-2">
-            <div className="w-full max-w-md space-y-3 md:space-y-5" style={{ fontFamily: "'Poppins', 'Inter', sans-serif" }}>
+            <div className="w-full max-w-md space-y-3 md:space-y-5" style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
               <div>
-                <label className="block text-white/70 font-light mb-1.5 md:mb-2 text-xs md:text-sm">
+                <label className="block text-slate-300 font-normal mb-1.5 md:mb-2 text-xs md:text-sm">
                   Category
                 </label>
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-accent transition-all appearance-none pr-8 cursor-pointer"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-slate-800/60 border border-blue-700/40 rounded-md text-white text-sm focus:outline-none focus:border-blue-500 transition-all appearance-none pr-8 cursor-pointer"
                   style={{ 
-                    fontFamily: "'Poppins', 'Inter', sans-serif",
-                    backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20' stroke='%23a78bfa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'%3E%3C/path%3E%3C/svg%3E\")",
+                    fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                    backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20' stroke='%2360a5fa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'%3E%3C/path%3E%3C/svg%3E\")",
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'right 0.75rem center',
                     backgroundSize: '1rem'
                   }}
                 >
                   {categories.map(cat => (
-                    <option key={cat} value={cat} className="bg-black">
+                    <option key={cat} value={cat} className="bg-slate-900">
                       {cat.charAt(0).toUpperCase() + cat.slice(1)}
                     </option>
                   ))}
@@ -180,28 +180,28 @@ const QuoteGenerator = () => {
               </div>
 
               <div>
-                <label className="block text-white/70 font-light mb-1.5 md:mb-2 text-xs md:text-sm">
+                <label className="block text-slate-300 font-normal mb-1.5 md:mb-2 text-xs md:text-sm">
                   Language
                 </label>
                 <select
                   value={language}
                   onChange={(e) => setLanguage(e.target.value)}
-                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-accent transition-all appearance-none pr-8 cursor-pointer"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-slate-800/60 border border-blue-700/40 rounded-md text-white text-sm focus:outline-none focus:border-blue-500 transition-all appearance-none pr-8 cursor-pointer"
                   style={{
-                    fontFamily: "'Poppins', 'Inter', sans-serif",
-                    backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20' stroke='%23a78bfa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'%3E%3C/path%3E%3C/svg%3E\")",
+                    fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                    backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20' stroke='%2360a5fa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'%3E%3C/path%3E%3C/svg%3E\")",
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'right 0.75rem center',
                     backgroundSize: '1rem'
                   }}
                 >
-                  <option value="en" className="bg-black">English</option>
-                  <option value="ar" className="bg-black">العربية (Arabic)</option>
+                  <option value="en" className="bg-slate-900">English</option>
+                  <option value="ar" className="bg-slate-900">العربية (Arabic)</option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-white/70 font-light mb-1.5 md:mb-2 text-xs md:text-sm">
+                <label className="block text-slate-300 font-normal mb-1.5 md:mb-2 text-xs md:text-sm">
                   Topic (optional)
                 </label>
                 <input
@@ -209,13 +209,13 @@ const QuoteGenerator = () => {
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   placeholder="e.g., perseverance, courage..."
-                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 rounded-lg text-white text-sm placeholder-white/30 focus:outline-none focus:border-purple-accent transition-all"
-                  style={{ fontFamily: "'Poppins', 'Inter', sans-serif" }}
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-slate-800/60 border border-blue-700/40 rounded-md text-white text-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-all"
+                  style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}
                 />
               </div>
 
               <div>
-                <label className="block text-white/70 font-light mb-1.5 md:mb-2 text-xs md:text-sm">
+                <label className="block text-slate-300 font-normal mb-1.5 md:mb-2 text-xs md:text-sm">
                   Style (optional)
                 </label>
                 <input
@@ -223,16 +223,16 @@ const QuoteGenerator = () => {
                   value={style}
                   onChange={(e) => setStyle(e.target.value)}
                   placeholder="e.g., Shakespeare, modern..."
-                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 rounded-lg text-white text-sm placeholder-white/30 focus:outline-none focus:border-purple-accent transition-all"
-                  style={{ fontFamily: "'Poppins', 'Inter', sans-serif" }}
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-slate-800/60 border border-blue-700/40 rounded-md text-white text-sm placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-all"
+                  style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}
                 />
               </div>
 
               <button
                 onClick={handleGenerateQuote}
                 disabled={loading}
-                className="w-full px-6 py-2.5 md:py-3 bg-gradient-to-r from-purple-primary via-purple-accent to-purple-primary hover:from-purple-accent hover:via-purple-light hover:to-purple-accent rounded-full text-white text-sm font-medium shadow-lg shadow-purple-primary/30 hover:shadow-purple-light/70 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-4 md:mt-6"
-                style={{ fontFamily: "'Poppins', 'Inter', sans-serif" }}
+                className="w-full px-6 py-2.5 md:py-3 bg-blue-600 hover:bg-blue-700 rounded-md text-white text-sm font-medium shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-4 md:mt-6"
+                style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}
               >
                 {loading ? 'Generating...' : 'Generate Quote'}
               </button>
@@ -243,13 +243,13 @@ const QuoteGenerator = () => {
 
       {/* Footer - Smaller on mobile */}
       <footer className="text-center pb-4 md:pb-6 flex-shrink-0">
-        <p className="text-white/60 text-xs md:text-sm font-light" style={{ fontFamily: "'Poppins', 'Inter', sans-serif" }}>
+        <p className="text-slate-400 text-xs md:text-sm font-normal" style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
           Built by{' '}
           <a 
             href="https://ayanexus.dev/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-purple-light hover:text-purple-accent transition-colors font-medium"
+            className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
           >
             AyaNexus
           </a>
