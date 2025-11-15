@@ -5,8 +5,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="relative h-screen bg-black overflow-hidden">
-      {/* Animated Background with Purple Dots */}
+    <div className="relative h-screen bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 overflow-hidden">
+      {/* Animated Background with Blue Dots */}
       <AnimatedBackground />
       
       {/* Main Content */}
