@@ -104,7 +104,7 @@ const QuoteGenerator = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 h-full">
           {/* Quote Display - More compact on mobile */}
           <div className="flex items-center justify-center order-2 lg:order-1">
-            <div className="w-full max-w-2xl border border-purple-primary/20 rounded-xl md:rounded-2xl p-4 md:p-8 lg:p-12 min-h-[180px] md:min-h-[280px] flex items-center justify-center bg-gradient-to-br from-purple-primary/20 via-purple-accent/10 to-transparent backdrop-blur-sm">
+            <div className="w-full max-w-2xl border border-purple-primary/20 p-4 md:p-8 lg:p-12 min-h-[180px] md:min-h-[280px] flex items-center justify-center bg-gradient-to-br from-purple-primary/20 via-purple-accent/10 to-transparent backdrop-blur-sm">
               {quote ? (
                 <div className="space-y-3 md:space-y-6 w-full" dir={language === 'ar' ? 'rtl' : 'ltr'}>
                   <div
@@ -130,7 +130,7 @@ const QuoteGenerator = () => {
                   )}
                   <button
                     onClick={handleCopyQuote}
-                    className="mt-3 md:mt-6 px-4 md:px-5 py-2 bg-purple-primary/20 hover:bg-purple-primary/30 border border-purple-primary/40 rounded-lg text-white text-xs md:text-sm font-light transition-all w-full md:w-auto"
+                    className="mt-3 md:mt-6 px-4 md:px-5 py-2 bg-purple-primary/20 hover:bg-purple-primary/30 border border-purple-primary/40 text-white text-xs md:text-sm font-light transition-all w-full md:w-auto"
                     style={{ fontFamily: language === 'ar' ? "'Cairo', sans-serif" : "'Poppins', 'Inter', sans-serif" }}
                   >
                     {language === 'ar' ? 'نسخ الاقتباس' : 'Copy Quote'}
@@ -162,7 +162,7 @@ const QuoteGenerator = () => {
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-accent transition-all appearance-none pr-8 cursor-pointer"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 text-white text-sm focus:outline-none focus:border-purple-accent transition-all appearance-none pr-8 cursor-pointer"
                   style={{ 
                     fontFamily: "'Poppins', 'Inter', sans-serif",
                     backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20' stroke='%23a78bfa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'%3E%3C/path%3E%3C/svg%3E\")",
@@ -186,7 +186,7 @@ const QuoteGenerator = () => {
                 <select
                   value={language}
                   onChange={(e) => setLanguage(e.target.value)}
-                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 rounded-lg text-white text-sm focus:outline-none focus:border-purple-accent transition-all appearance-none pr-8 cursor-pointer"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 text-white text-sm focus:outline-none focus:border-purple-accent transition-all appearance-none pr-8 cursor-pointer"
                   style={{
                     fontFamily: "'Poppins', 'Inter', sans-serif",
                     backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20' stroke='%23a78bfa'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'%3E%3C/path%3E%3C/svg%3E\")",
@@ -209,7 +209,7 @@ const QuoteGenerator = () => {
                   value={topic}
                   onChange={(e) => setTopic(e.target.value)}
                   placeholder="e.g., perseverance, courage..."
-                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 rounded-lg text-white text-sm placeholder-white/30 focus:outline-none focus:border-purple-accent transition-all"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 text-white text-sm placeholder-white/30 focus:outline-none focus:border-purple-accent transition-all"
                   style={{ fontFamily: "'Poppins', 'Inter', sans-serif" }}
                 />
               </div>
@@ -223,7 +223,7 @@ const QuoteGenerator = () => {
                   value={style}
                   onChange={(e) => setStyle(e.target.value)}
                   placeholder="e.g., Shakespeare, modern..."
-                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 rounded-lg text-white text-sm placeholder-white/30 focus:outline-none focus:border-purple-accent transition-all"
+                  className="w-full px-3 md:px-4 py-2 md:py-2.5 bg-black/30 border border-purple-primary/30 text-white text-sm placeholder-white/30 focus:outline-none focus:border-purple-accent transition-all"
                   style={{ fontFamily: "'Poppins', 'Inter', sans-serif" }}
                 />
               </div>
@@ -231,7 +231,7 @@ const QuoteGenerator = () => {
               <button
                 onClick={handleGenerateQuote}
                 disabled={loading}
-                className="w-full px-6 py-2.5 md:py-3 bg-gradient-to-r from-purple-primary via-purple-accent to-purple-primary hover:from-purple-accent hover:via-purple-light hover:to-purple-accent rounded-full text-white text-sm font-medium shadow-lg shadow-purple-primary/30 hover:shadow-purple-light/70 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-4 md:mt-6"
+                className="w-full px-6 py-2.5 md:py-3 bg-gradient-to-r from-purple-primary via-purple-accent to-purple-primary hover:from-purple-accent hover:via-purple-light hover:to-purple-accent text-white text-sm font-medium shadow-lg shadow-purple-primary/30 hover:shadow-purple-light/70 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-4 md:mt-6"
                 style={{ fontFamily: "'Poppins', 'Inter', sans-serif" }}
               >
                 {loading ? 'Generating...' : 'Generate Quote'}
