@@ -561,6 +561,17 @@ For traditional hosting (VPS, cloud VM):
 - `category` (string): Category of the quote
 - `timestamp` (string): ISO 8601 timestamp
 
+## Future Development
+
+Looking to contribute or expand the project? Check out our comprehensive feature documentation:
+
+- **[Feature Suggestions](./FEATURE_SUGGESTIONS.md)** - 56 potential features across 11 categories
+- **[Implementation Roadmap](./IMPLEMENTATION_ROADMAP.md)** - Phased development plan with effort estimates
+- **[Quick Start Features](./QUICK_START_FEATURES.md)** - Top 10 features you can implement today
+- **[Feature Research Summary](./FEATURE_RESEARCH_SUMMARY.md)** - Overview and recommendations
+
+These documents provide detailed guidance on expanding Swan with new capabilities, from simple UI improvements to advanced features like user authentication, premium subscriptions, and mobile apps.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -573,6 +584,12 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5. Commit your changes (`git commit -m 'Add amazing feature'`)
 6. Push to the branch (`git push origin feature/amazing-feature`)
 7. Open a Pull Request
+
+### Want to Add a New Feature?
+1. Review the [Feature Suggestions](./FEATURE_SUGGESTIONS.md) document
+2. Check the [Implementation Roadmap](./IMPLEMENTATION_ROADMAP.md) for planning
+3. Use [Quick Start Features](./QUICK_START_FEATURES.md) for code examples
+4. Follow the development workflow above
 
 ## Tech Stack
 
