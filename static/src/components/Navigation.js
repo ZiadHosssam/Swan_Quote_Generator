@@ -24,7 +24,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo/Brand */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-purple-primary to-purple-accent rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-purple-primary to-purple-accent flex items-center justify-center">
               <svg
                 className="w-6 h-6 text-white"
                 fill="none"
@@ -58,7 +58,7 @@ const Navigation = () => {
             >
               Experience
             </a>
-            <button className="px-6 py-2.5 bg-purple-primary hover:bg-purple-accent rounded-full text-white font-medium shadow-lg shadow-purple-primary/50 hover:shadow-purple-accent/50 transition-all duration-300">
+            <button className="px-6 py-2.5 bg-purple-primary hover:bg-purple-accent text-white font-medium shadow-lg shadow-purple-primary/50 hover:shadow-purple-accent/50 transition-all duration-300">
               Get Started
             </button>
           </div>
